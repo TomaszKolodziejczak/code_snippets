@@ -3,10 +3,6 @@ This is a simple example of using data structures and loops.
 
 Code reformatting needed
 """
-
-
-
-
 import random
 from enum import Enum
 from time import sleep
