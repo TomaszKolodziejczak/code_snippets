@@ -35,6 +35,12 @@ class Student:
             else:
                 raise ValueError(f"Grade {grade} is out of range 1-6")
 
+    def remove_grade(self, idx: int):
+        try:
+            return self.grades.pop(idx)
+        except IndexError:
+            raise IndexError("Can't delete index - out of range")
+
 
 @dataclass(order=True)
 class Country:
