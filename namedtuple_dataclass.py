@@ -51,9 +51,9 @@ class Country:
 
     
 my_countries = [
-    Country('Poland', 2000, 5000.24, 800.5),
+    Country('Hungary', 4000, 5000.24, 700.5),
     Country('Germany', 3000, 5000.24, 800.5),
-    Country('Russia', 1000, 5000.24, 800.5),
+    Country('Poland', 5000, 5000.24, 900.5),
 ]
 
 print(sorted(my_countries, key=lambda x: x.population))
