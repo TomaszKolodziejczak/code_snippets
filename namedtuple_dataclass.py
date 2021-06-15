@@ -21,6 +21,21 @@ def labeled_entries(data: List) -> List[Person]:
     return [Person([entry['name']], Person[entry['surname']]) for entry in data]
 
 
+@dataclass()
+class Student:
+    name: str
+    surname: str
+    age: int
+    grades: List = field(default_factory=list)
+
+    def add_grades(self, *grades):
+        for grade in grades:
+            if 1 <= grade <= 6:
+                self.grades.append(grade)
+            else:
+                raise ValueError(f"Grade {grade} is out of range 1-6")
+
+
 @dataclass(order=True)
 class Country:
     name: str = field(compare=False)
