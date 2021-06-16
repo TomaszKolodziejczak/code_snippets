@@ -1,5 +1,4 @@
 import pytest
-
 from functions import is_palindrom
 
 
