@@ -14,4 +14,9 @@ def format_phone_number(number: str, area_code: str = '+48', delimeter: str = '-
 
 
 if __name__ == "__main__":
-    print(format_phone_number('666777888'))
+    data = {
+        'number': '456654456',
+        'area_code': '+123',
+        'delimeter': '/',
+    }
+    print(format_phone_number(**data))
