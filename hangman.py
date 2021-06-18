@@ -1,8 +1,8 @@
 from string import ascii_lowercase
 from typing import List
-
 from Words import get_random_word
 
+""" refactoring needed """
 
 def get_users_attempt() -> int:
     """Ask user about number of incorrect attempts for the game."""
@@ -61,7 +61,7 @@ def get_next_letter(remaining_letters: List):
 def play_hangman():
     """Play a game of hangman."""
 
-    #Set difficulty
+    # Set difficulty
     print('Starting a game of Hangman...')
     attempts_remaining = get_users_attempt()
     min_word_length = get_min_word_length()
