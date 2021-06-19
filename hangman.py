@@ -1,8 +1,9 @@
 from string import ascii_lowercase
 from typing import List
-from Words import get_random_word
+
 
 """ refactoring needed """
+
 
 def get_users_attempt() -> int:
     """Ask user about number of incorrect attempts for the game."""
