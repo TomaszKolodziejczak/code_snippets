@@ -32,11 +32,5 @@ def beeramid(bonus, price):
 
 
 # solution 2
-def beeramid(bonus, price):
-    n = bonus // price
-    return next(x for x in count(int((n * 3)**(1 / 3) + 1), -1) if x * (x + 1) * (2 * x + 1) // 6 <= n)
-
-
-# solution 3
 def beeramid(bonus, price, row=1):
     return 0 if bonus < price * row**2 else 1 + beeramid(bonus - price * row**2, price, row + 1)
