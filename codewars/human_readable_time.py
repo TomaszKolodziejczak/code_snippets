@@ -13,6 +13,9 @@ kata's author BattleRattle
 
 
 # solution 1
+from symbol import test
+
+
 def make_readable(seconds):
     hours = seconds // 3600
     minutes = seconds // 60 - hours * 60
@@ -24,4 +27,7 @@ def make_readable(seconds):
 def make_readable2(seconds):
     return f"{seconds // 3600:02}:{seconds // 60 % 60:02}:{seconds % 60:02}"
 
-print(make_readable2(3620))
+
+if __name__ == "__main__":
+    print(make_readable2(3620))
+
