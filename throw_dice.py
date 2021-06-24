@@ -26,7 +26,11 @@ if __name__ == "__main__":
     print(result)
 
     # solution 2
-    d = Dice(1, 6)
-    print(d)
-    steps = d.throw()
+    set_min_val = int(input("Enter min value you want to get: "))
+    set_max_val = int(input("Enter max value you want to get: "))
+
+    dice = Dice(set_min_val, set_max_val)
+    print(dice)
+
+    steps = dice.throw()
     print(f'You can move {steps} steps forward')
