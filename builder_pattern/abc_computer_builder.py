@@ -19,17 +19,17 @@ class AbcComputerBuilder(ABC):
         pass
 
     @abstractmethod
-    def get_case():
+    def get_case(self):
         pass
 
     @abstractmethod
-    def get_mainboard():
+    def get_mainboard(self):
         pass
 
     @abstractmethod
-    def install_mainboard():
+    def install_mainboard(self):
         pass
 
     @abstractmethod
-    def install_hard_drive():
+    def install_hard_drive(self):
         pass
