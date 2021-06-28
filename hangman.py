@@ -58,6 +58,10 @@ def get_next_letter(remaining_letters: List):
         return next_letter
 
 
+def get_random_word(min_word_length):
+    pass
+
+
 def play_hangman():
     """Play a game of hangman."""
 
