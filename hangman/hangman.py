@@ -1,9 +1,6 @@
 from string import ascii_lowercase
 from typing import List
 
-""" refactoring needed """
-
-
 def get_users_attempt() -> int:
     """Ask user about number of incorrect attempts for the game."""
     while True:
