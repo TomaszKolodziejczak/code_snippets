@@ -1,0 +1,11 @@
+television
+sun
+material
+chair
+computer
+tower
+telephone
+contamination
+desk
+pizza
+warsaw

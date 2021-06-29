@@ -1,5 +1,7 @@
 from string import ascii_lowercase
 from typing import List
+from Words import get_random_word
+
 
 def get_users_attempt() -> int:
     """Ask user about number of incorrect attempts for the game."""
@@ -53,10 +55,6 @@ def get_next_letter(remaining_letters: List):
         else:
             remaining_letters.remove(next_letter)
         return next_letter
-
-
-def get_random_word(min_word_length):
-    pass
 
 
 def play_hangman():
