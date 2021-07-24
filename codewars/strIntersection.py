@@ -22,8 +22,8 @@ def find_intersection(str_arr):
         array = array.replace(',', '').split()
         array_list.append(map(int, array))
 
-    set_list = map(set, array_list)
-    intersection = set.intersection(*set_list)
+    list_to_set = map(set, array_list)
+    intersection = set.intersection(*list_to_set)
     str_intersection = ','.join(map(str, sorted(intersection)))
 
     if str_intersection:
