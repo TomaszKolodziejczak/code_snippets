@@ -11,17 +11,19 @@ def loving_python(fn):
 
 def capitalise_text(fn):
     def wrapper(*args):
-        return fn(*args)
+        result = fn(*args)
+        return result.title()
 
     return wrapper
 
 
 def run_only_between(from_, to_):
     def dec(fn):
-        def wrapper(*args):
+        def wrapper(*args, **kwargs):
             if from_ <= datetime.now().hour < to_:
-                return fn(*args)
+                return fn(*args, **kwargs)
         return wrapper
+
     return dec
 
 
