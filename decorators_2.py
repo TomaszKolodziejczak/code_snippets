@@ -1,22 +1,34 @@
+from datetime import datetime
+
+
 def loving_python(fn):
     def wrapper(*args, **kwargs):
-        result = fn(*args, **kwargs)
         print('No matter what the function returns, let everyone know You love Python!')
-        return result
+        return fn(*args, **kwargs)
+
     return wrapper
 
 
 def capitalise_text(fn):
-    def wrapper(*args, **kwargs):
-        result = fn(*args, **kwargs)
+    def wrapper(*args):
+        return fn(*args)
 
-        return result.title()
     return wrapper
 
 
-@loving_python
+def run_only_between(from_, to_):
+    def dec(fn):
+        def wrapper(*args):
+            if from_ <= datetime.now().hour < to_:
+                return fn(*args)
+        return wrapper
+    return dec
+
+
 @capitalise_text
-def introduce_yourself(name, age=0):
+@loving_python
+@run_only_between(6, 15)
+def introduce_yourself(name, age):
     return f'My name is {name} and I am {age} yo.'
 
 
