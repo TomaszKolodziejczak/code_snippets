@@ -6,6 +6,14 @@ def capitalise_text(fn):
     return wrapper
 
 
+def loving_python(fn):
+    def wrapper(*args, **kwargs):
+        fn(*args, **kwargs)
+        print('No matter what the function returns, let everyone know You love Python!')
+    return wrapper
+
+
+@loving_python
 @capitalise_text
 def introduce_yourself(name, age):
     return f'My name is {name} and I am {age} yo.'
