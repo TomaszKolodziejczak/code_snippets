@@ -15,5 +15,5 @@ def min_max_number(nums: List) -> str:
 
 
 if __name__ == "__main__":
-    nums = [17, -4, 6, 9, 12, -334, -2, 1]
+    nums = [17, -4, 6, 9, 12, -334, -2, 1, 44]
     print(min_max_number(nums))
