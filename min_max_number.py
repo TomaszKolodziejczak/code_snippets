@@ -5,10 +5,10 @@ def min_max_number(nums: List) -> str:
     minimum, maximum = None, None
 
     for num in nums:
-        if not maximum or maximum < num:
+        if maximum is None or maximum < num:
             maximum = num
 
-        if not minimum or minimum > num:
+        if minimum is None or minimum > num:
             minimum = num
 
     return f'minimum: {minimum}\nmaximum: {maximum}'
