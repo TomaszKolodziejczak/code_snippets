@@ -3,7 +3,7 @@ from contextlib import contextmanager
 
 # Content Manager as a class
 
-class FileManager():
+class FileManager:
     def __init__(self, filename, mode):
         self.filename = filename
         self.mode = mode
